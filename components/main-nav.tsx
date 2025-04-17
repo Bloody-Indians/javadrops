@@ -12,6 +12,42 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Menu } from "lucide-react"
 
 export function MainNav() {
+  const { data: session } = useSession()
+  return (
+    <header className="sticky top-0 z-50 w-full border-b bg-white dark:bg-gray-900">
+      <div className="container flex h-16 items-center px-4">
+        <Link href="/" className="flex items-center space-x-2">
+          <Image
+            src="/Javadrops.png"
+            alt="JavaDrops"
+            width={40}
+            height={40}
+            className="h-8 w-auto"
+          />
+          <span className="text-xl font-bold">JavaDrops</span>
+        </Link>
+        <nav className="flex flex-1 items-center space-x-6 pl-6">
+          <Link href="/marketplace" className="text-sm font-medium hover:text-primary">
+            Marketplace
+          </Link>
+          <Link href="/docs" className="text-sm font-medium hover:text-primary">
+            Documentation
+          </Link>
+          <Link href="/support" className="text-sm font-medium hover:text-primary">
+            Support
+          </Link>
+        </nav>
+        {session ? (
+          <UserNav />
+        ) : (
+          <Button asChild variant="default">
+            <Link href="/login">Sign In</Link>
+          </Button>
+        )}
+      </div>
+    </header>
+  )
+}
   const pathname = usePathname()
   const { user } = useAuth()
   const [open, setOpen] = useState(false)
