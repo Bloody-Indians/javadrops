@@ -23,6 +23,11 @@ export function MainNav() {
       active: pathname === "/",
     },
     {
+      href: "/aws-training",
+      label: "AWS Training",
+      active: pathname.startsWith("/aws-training"),
+    },
+    {
       href: "/student/dashboard",
       label: "Student",
       active: pathname.startsWith("/student"),
