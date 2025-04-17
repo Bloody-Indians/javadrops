@@ -24,17 +24,17 @@ export function MainNav() {
     },
     {
       href: "/student/dashboard",
-      label: "Student Portal",
+      label: "Student",
       active: pathname.startsWith("/student"),
     },
     {
       href: "/agent/dashboard",
-      label: "Agent Portal",
+      label: "Agent",
       active: pathname.startsWith("/agent"),
     },
     {
       href: "/admin/dashboard",
-      label: "Admin Portal",
+      label: "Admin",
       active: pathname.startsWith("/admin"),
     },
     {

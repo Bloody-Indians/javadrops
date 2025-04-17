@@ -11,7 +11,7 @@ export default function Home() {
         </div>
         <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">Welcome to JavaDrops</h1>
         <p className="max-w-[700px] text-lg text-muted-foreground">
-          Your complete platform for student projects, agent collaboration, and online marketplace.
+          Empower your learning journey with AI-driven solutions, intelligent project matching, and cutting-edge educational resources.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <Button asChild size="lg">
