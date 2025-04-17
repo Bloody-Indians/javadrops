@@ -5,7 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { MainNav } from "@/components/main-nav"
 import { AuthProvider } from "@/components/auth-provider"
 import { Toaster } from "@/components/ui/toaster"
-import { PayPalScriptProvider } from "@paypal/react-paypal-js"
+import { PayPalProvider } from "@/components/paypal-provider"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -24,12 +24,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <AuthProvider>
-          <PayPalScriptProvider
-            options={{
-              clientId: process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID || "test",
-              currency: "USD",
-            }}
-          >
+          <PayPalProvider>
             <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
               <div className="flex min-h-screen flex-col">
                 <MainNav />
@@ -40,7 +35,7 @@ export default function RootLayout({
               </div>
               <Toaster />
             </ThemeProvider>
-          </PayPalScriptProvider>
+          </PayPalProvider>
         </AuthProvider>
       </body>
     </html>
