@@ -1,0 +1,13 @@
+TypeError: (0 , react__WEBPACK_IMPORTED_MODULE_0__.createContext) is not a function
+    at eval (webpack-internal:///(rsc)/./node_modules/.pnpm/@paypal+react-paypal-js@8.8.3_react-dom@19.1.0_react@19.1.0__react@19.1.0/node_modules/@paypal/react-paypal-js/dist/esm/react-paypal-js.js:285:73)
+    at <unknown> (rsc)/./node_modules/.pnpm/@paypal+react-paypal-js@8.8.3_react-dom@19.1.0_react@19.1.0__react@19.1.0/node_modules/@paypal/react-paypal-js/dist/esm/react-paypal-js.js (/home/runner/workspace/.next/server/vendor-chunks/@paypal+react-paypal-js@8.8.3_react-dom@19.1.0_react@19.1.0__react@19.1.0.js:20:1)
+    at __webpack_require__ (file:///home/runner/workspace/.next/server/webpack-runtime.js:33:42)
+    at eval (webpack-internal:///(rsc)/./app/layout.tsx:15:81)
+    at <unknown> (rsc)/./app/layout.tsx (/home/runner/workspace/.next/server/app/page.js:33:1)
+    at Function.__webpack_require__ (file:///home/runner/workspace/.next/server/webpack-runtime.js:33:42)
+    at async getLayoutOrPageModule (file:///home/runner/workspace/node_modules/.pnpm/next@15.2.4_react-dom@19.1.0_react@19.1.0__react@19.1.0/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:439:6388)
+    at async createComponentTreeInternal (file:///home/runner/workspace/node_modules/.pnpm/next@15.2.4_react-dom@19.1.0_react@19.1.0__react@19.1.0/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:439:12904)
+    at async getRSCPayload (file:///home/runner/workspace/node_modules/.pnpm/next@15.2.4_react-dom@19.1.0_react@19.1.0__react@19.1.0/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:443:9560)
+    at async renderToStream (file:///home/runner/workspace/node_modules/.pnpm/next@15.2.4_react-dom@19.1.0_react@19.1.0__react@19.1.0/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:443:39377)
+    at async renderToHTMLOrFlightImpl (file:///home/runner/workspace/node_modules/.pnpm/next@15.2.4_react-dom@19.1.0_react@19.1.0__react@19.1.0/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:443:27540)
+    at async doRender (file:///home/runner/workspace/node_modules/.pnpm/next@15.2.4_react-dom@19.1.0_react@19.1.0__react@19.1.0/node_modules/next/dist/server/base-server.js:1650:34)
