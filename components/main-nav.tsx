@@ -50,8 +50,8 @@ export function MainNav() {
   ]
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background">
-      <div className="container flex h-16 items-center px-4">
+    <header className="sticky top-0 z-50 w-full border-b bg-white shadow-sm">
+      <div className="container flex h-16 items-center px-4 max-w-7xl mx-auto">
         <Link href="/" className="flex items-center space-x-2">
           <div className="relative h-10 w-10">
             <Image src="/Javadrops.png" alt="JavaDrops Logo" fill className="object-contain" />
@@ -65,8 +65,8 @@ export function MainNav() {
                 <Link
                   href={route.href}
                   className={cn(
-                    "text-sm font-medium transition-colors hover:text-primary px-4 py-2 rounded-md",
-                    route.active ? "text-primary bg-muted" : "text-muted-foreground",
+                    "text-sm font-medium transition-colors hover:text-blue-600 px-4 py-2 rounded-md",
+                    route.active ? "text-blue-600 bg-blue-50" : "text-gray-600",
                   )}
                 >
                   {route.label}
