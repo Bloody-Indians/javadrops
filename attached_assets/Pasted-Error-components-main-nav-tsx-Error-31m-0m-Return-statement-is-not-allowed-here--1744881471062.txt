@@ -1,0 +1,99 @@
+Error: ./components/main-nav.tsx
+Error:   [31m×[0m Return statement is not allowed here
+     ╭─[[36;1;4m/home/runner/workspace/components/main-nav.tsx[0m:88:1]
+ [2m 85[0m │         },
+ [2m 86[0m │       ]
+ [2m 87[0m │     
+ [2m 88[0m │ [35;1m╭[0m[35;1m─[0m[35;1m▶[0m   return (
+ [2m 89[0m │ [35;1m│[0m       <header className="sticky top-0 z-50 w-full border-b bg-background">
+ [2m 90[0m │ [35;1m│[0m         <div className="container flex h-16 items-center px-4">
+ [2m 91[0m │ [35;1m│[0m           <Link href="/" className="flex items-center space-x-2">
+ [2m 92[0m │ [35;1m│[0m             <div className="relative h-10 w-10">
+ [2m 93[0m │ [35;1m│[0m               <Image src="/javadrops-logo.png" alt="JavaDrops Logo" fill className="object-contain" />
+ [2m 94[0m │ [35;1m│[0m             </div>
+ [2m 95[0m │ [35;1m│[0m             <span className="hidden font-bold sm:inline-block">JavaDrops</span>
+ [2m 96[0m │ [35;1m│[0m           </Link>
+ [2m 97[0m │ [35;1m│[0m           <nav className="hidden flex-1 md:flex md:justify-center">
+ [2m 98[0m │ [35;1m│[0m             <ul className="flex items-center space-x-1">
+ [2m 99[0m │ [35;1m│[0m               {routes.map((route) => (
+ [2m100[0m │ [35;1m│[0m                 <li key={route.href}>
+ [2m101[0m │ [35;1m│[0m                   <Link
+ [2m102[0m │ [35;1m│[0m                     href={route.href}
+ [2m103[0m │ [35;1m│[0m                     className={cn(
+ [2m104[0m │ [35;1m│[0m                       "text-sm font-medium transition-colors hover:text-primary px-4 py-2 rounded-md",
+ [2m105[0m │ [35;1m│[0m                       route.active ? "text-primary bg-muted" : "text-muted-foreground",
+ [2m106[0m │ [35;1m│[0m                     )}
+ [2m107[0m │ [35;1m│[0m                   >
+ [2m108[0m │ [35;1m│[0m                     {route.label}
+ [2m109[0m │ [35;1m│[0m                   </Link>
+ [2m110[0m │ [35;1m│[0m                 </li>
+ [2m111[0m │ [35;1m│[0m               ))}
+ [2m112[0m │ [35;1m│[0m             </ul>
+ [2m113[0m │ [35;1m│[0m           </nav>
+ [2m114[0m │ [35;1m│[0m           <div className="flex items-center justify-end space-x-4 flex-1">
+ [2m115[0m │ [35;1m│[0m             {user ? (
+ [2m116[0m │ [35;1m│[0m               <UserNav />
+ [2m117[0m │ [35;1m│[0m             ) : (
+ [2m118[0m │ [35;1m│[0m               <Button asChild variant="default" size="sm">
+ [2m119[0m │ [35;1m│[0m                 <Link href="/login">Sign In</Link>
+ [2m120[0m │ [35;1m│[0m               </Button>
+ [2m121[0m │ [35;1m│[0m             )}
+ [2m122[0m │ [35;1m│[0m             <Sheet open={open} onOpenChange={setOpen}>
+ [2m123[0m │ [35;1m│[0m               <SheetTrigger asChild className="md:hidden">
+ [2m124[0m │ [35;1m│[0m                 <Button variant="outline" size="icon">
+ [2m125[0m │ [35;1m│[0m                   <Menu className="h-5 w-5" />
+ [2m126[0m │ [35;1m│[0m                   <span className="sr-only">Toggle menu</span>
+ [2m127[0m │ [35;1m│[0m                 </Button>
+ [2m128[0m │ [35;1m│[0m               </SheetTrigger>
+ [2m129[0m │ [35;1m│[0m               <SheetContent side="right" className="md:hidden">
+ [2m130[0m │ [35;1m│[0m                 <nav className="flex flex-col gap-4 pt-10">
+ [2m131[0m │ [35;1m│[0m                   {routes.map((route) => (
+ [2m132[0m │ [35;1m│[0m                     <Link
+ [2m133[0m │ [35;1m│[0m                       key={route.href}
+ [2m134[0m │ [35;1m│[0m                       href={route.href}
+ [2m135[0m │ [35;1m│[0m                       className={cn(
+ [2m136[0m │ [35;1m│[0m                         "text-sm font-medium transition-colors hover:text-primary p-2 rounded-md",
+ [2m137[0m │ [35;1m│[0m                         route.active ? "text-primary bg-muted" : "text-muted-foreground",
+ [2m138[0m │ [35;1m│[0m                       )}
+ [2m139[0m │ [35;1m│[0m                       onClick={() => setOpen(false)}
+ [2m140[0m │ [35;1m│[0m                     >
+ [2m141[0m │ [35;1m│[0m                       {route.label}
+ [2m142[0m │ [35;1m│[0m                     </Link>
+ [2m143[0m │ [35;1m│[0m                   ))}
+ [2m144[0m │ [35;1m│[0m                 </nav>
+ [2m145[0m │ [35;1m│[0m               </SheetContent>
+ [2m146[0m │ [35;1m│[0m             </Sheet>
+ [2m147[0m │ [35;1m│[0m           </div>
+ [2m148[0m │ [35;1m│[0m         </div>
+ [2m149[0m │ [35;1m│[0m       </header>
+ [2m150[0m │ [35;1m╰[0m[35;1m─[0m[35;1m▶[0m   )
+ [2m151[0m │     }
+     ╰────
+  [31m×[0m Expression expected
+     ╭─[[36;1;4m/home/runner/workspace/components/main-nav.tsx[0m:151:1]
+ [2m148[0m │       </div>
+ [2m149[0m │     </header>
+ [2m150[0m │   )
+ [2m151[0m │ }
+     · [35;1m─[0m
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./components/main-nav.tsx
+./app/layout.tsx
+    at BuildError (webpack-internal:///(app-pages-browser)/./node_modules/.pnpm/next@15.2.4_react-dom@19.1.0_react@19.1.0__react@19.1.0/node_modules/next/dist/client/components/react-dev-overlay/ui/container/build-error.js:43:41)
+    at react-stack-bottom-frame (webpack-internal:///(app-pages-browser)/./node_modules/.pnpm/next@15.2.4_react-dom@19.1.0_react@19.1.0__react@19.1.0/node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:23950:20)
+    at renderWithHooksAgain (webpack-internal:///(app-pages-browser)/./node_modules/.pnpm/next@15.2.4_react-dom@19.1.0_react@19.1.0__react@19.1.0/node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:5179:20)
+    at renderWithHooks (webpack-internal:///(app-pages-browser)/./node_modules/.pnpm/next@15.2.4_react-dom@19.1.0_react@19.1.0__react@19.1.0/node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:5091:22)
+    at updateFunctionComponent (webpack-internal:///(app-pages-browser)/./node_modules/.pnpm/next@15.2.4_react-dom@19.1.0_react@19.1.0__react@19.1.0/node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:8328:19)
+    at beginWork (webpack-internal:///(app-pages-browser)/./node_modules/.pnpm/next@15.2.4_react-dom@19.1.0_react@19.1.0__react@19.1.0/node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:9945:18)
+    at runWithFiberInDEV (webpack-internal:///(app-pages-browser)/./node_modules/.pnpm/next@15.2.4_react-dom@19.1.0_react@19.1.0__react@19.1.0/node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:1511:30)
+    at performUnitOfWork (webpack-internal:///(app-pages-browser)/./node_modules/.pnpm/next@15.2.4_react-dom@19.1.0_react@19.1.0__react@19.1.0/node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:15120:22)
+    at workLoopSync (webpack-internal:///(app-pages-browser)/./node_modules/.pnpm/next@15.2.4_react-dom@19.1.0_react@19.1.0__react@19.1.0/node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:14944:41)
+    at renderRootSync (webpack-internal:///(app-pages-browser)/./node_modules/.pnpm/next@15.2.4_react-dom@19.1.0_react@19.1.0__react@19.1.0/node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:14924:11)
+    at performWorkOnRoot (webpack-internal:///(app-pages-browser)/./node_modules/.pnpm/next@15.2.4_react-dom@19.1.0_react@19.1.0__react@19.1.0/node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:14411:13)
+    at performWorkOnRootViaSchedulerTask (webpack-internal:///(app-pages-browser)/./node_modules/.pnpm/next@15.2.4_react-dom@19.1.0_react@19.1.0__react@19.1.0/node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.development.js:16275:7)
+    at MessagePort.performWorkUntilDeadline (webpack-internal:///(app-pages-browser)/./node_modules/.pnpm/next@15.2.4_react-dom@19.1.0_react@19.1.0__react@19.1.0/node_modules/next/dist/compiled/scheduler/cjs/scheduler.development.js:45:48)
