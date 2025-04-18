@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
+    // output: 'export', // ❌ Commented out to allow API routes
   basePath: '/javadrops',
   images: {
     unoptimized: true,
